@@ -1,0 +1,391 @@
+.grid-scroll {
+    flex: 0 1 auto;
+    min-width: 0;                    /* let the grid shrink and scroll instead of pushing the bar off */
+    width: auto;
+    box-sizing: border-box;          /* height comes from stretching to the .demo-content row */
+    overflow: auto;              /* both scrollbars, only when needed */
+    border: 1px solid #ccc;
+}
+
+.grid {
+    --cell: 80px;
+    border-collapse: separate;   /* NOT collapse: borders vanish on sticky cells */
+    border-spacing: 0;
+    font: 13px system-ui, sans-serif;
+}
+
+.grid th,
+.grid td {
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    border-right: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    background: #fff;            /* sticky cells need an opaque background */
+}
+
+/* Frozen first row */
+.grid thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f3f5f8;
+}
+
+/* Frozen first column */
+.grid tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: #f3f5f8;
+    text-align: right;
+}
+
+/* Corner cell: frozen both ways, sits above everything */
+.grid thead th:first-child {
+    left: 0;
+    z-index: 3;
+}
+
+.grid tbody th { padding: 0 8px; }   /* row-header column keeps its own width */
+
+/* Every data cell (and its column header) is exactly --cell wide */
+.grid td,
+.grid thead th:not(:first-child) {
+    width: var(--cell);
+    min-width: var(--cell);
+}
+
+.grid .cell {
+    box-sizing: border-box;
+    width: var(--cell);
+    height: var(--cell);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* While measuring, let content decide the size */
+.grid.measuring .cell {
+    width: auto;
+    height: auto;
+}
+
+/* Keep leading spaces visible: " Paris" and "Paris" are different tokens */
+.grid .tok {
+    white-space: pre;
+}
+
+.grid .cell.dark {
+    color: #fff;
+}
+
+.true-next-token-banner {
+    color: #000;             /* banner keeps dark text on its own background */
+    margin: 0;                       /* in normal flow now, no absolute positioning */
+    padding: 1px 5px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: lightcoral;
+}
+
+/* ---------- Top-N popup ---------- */
+#logit-popup {
+    position: fixed;                  /* left/top set in JS, relative to the window */
+    z-index: 10;                      /* above the sticky headers */
+    pointer-events: none;             /* hover preview never blocks the grid */
+    width: 280px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    color: #1f2937;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+    font: 12px/1.4 system-ui, sans-serif;   /* .content-pane sets font-size: 0 */
+}
+
+#logit-popup.pinned {
+    pointer-events: auto;             /* pinned: clicks on it don't fall through to cells */
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.35), 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+.popup-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.popup-sub {
+    font-size: 11px;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+.popup-rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.popup-row {
+    display: grid;
+    grid-template-columns: 38px 92px 1fr 50px;   /* rank | token | bar | pct */
+    align-items: center;
+    gap: 6px;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.popup-row.hit {
+    background: #dcfce7;              /* actual next token */
+}
+
+.popup-rank {
+    color: #6b7280;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.popup-tok {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;                 /* keep leading spaces */
+    padding: 0 4px;
+    border-radius: 3px;
+    background: #f3f4f6;
+    font-family: ui-monospace, Consolas, monospace;
+}
+
+.popup-bar-track {
+    height: 6px;
+    border-radius: 3px;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.popup-bar {
+    display: block;
+    height: 100%;
+    background: #1d4ed8;              /* same blue as the grid scale */
+}
+
+.popup-pct {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.popup-sep {
+    height: 0;
+    margin: 4px 0;
+    border-top: 1px dashed #d1d5db;
+}
+
+.popup-note {
+    margin-top: 8px;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.popup-key {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    vertical-align: -1px;
+    border-radius: 2px;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+}
+
+/* Cell whose popup is pinned */
+.grid td.pinned {
+    outline: 2px solid #f59e0b;
+    outline-offset: -2px;
+}
+
+.grid td[data-pos] {
+    cursor: pointer;
+}
+
+.content-pane {
+    width: auto;
+    flex: 1;
+    padding: 0;
+    margin: 0px 10px 0px 10px;
+    font-size: 0;
+    min-height:0;
+}
+
+.demo-info {
+    height: 100%;
+    width: 25%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.demo-content {
+    max-height: 100%;                /* as tall as the grid, but never taller than the pane */
+    width: min-content;
+    max-width: 75%;
+    display: inline-flex;            /* grid + color bar side by side */
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+#logit-prompt {
+    height: 100px;
+    margin-bottom: 9px;
+}
+
+#logit-count-input {
+    width: 80px;
+}
+
+.demo-info div {
+    text-align: center;
+}
+
+#navbar {
+    width:100%;
+    height:50px;
+    flex-shrink: 0;
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: solid black 5px;
+}
+
+.nav-btn {
+    flex-grow: 1;
+    max-width:200px;
+    margin: 0px 10px  0px 10px;
+    border: solid black 2px;
+    border-radius: 5px;
+    text-align:left;
+    padding: 0 10px;
+}
+
+.nav-btn.nav-selected {
+    background-color: lightslategray;
+}
+
+.nav-btn h1 {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    position:relative;
+    left:0;
+    top:0;
+}
+
+/* Page is exactly the window height, so the content pane has a definite
+   height to fill and the grid scrolls inside it instead of the page growing */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 8px;                      /* replaces the default body margin */
+    overflow: hidden;
+}
+
+.inactive {
+    display: none !important;
+}
+
+/* ---------- Color bar ---------- */
+.colorbar {
+    flex-shrink: 0;
+    align-self: stretch;               /* same height as the visible grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-height: 160px;
+    padding: 4px 0 8px;
+    box-sizing: border-box;
+    font: 12px system-ui, sans-serif;   /* .content-pane sets font-size: 0 */
+}
+
+.colorbar-body {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    gap: 4px;
+}
+
+.colorbar-gradient {
+    width: 16px;
+    border: 1px solid #ccc;
+}
+
+.colorbar-ticks {
+    position: relative;
+    width: 32px;
+}
+
+.colorbar-tick {
+    position: absolute;
+    left: 0;
+    transform: translateY(50%);        /* center label on its value */
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.colorbar-tick::before {               /* small tick mark next to the gradient */
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1px;
+    margin-right: 3px;
+    vertical-align: middle;
+    background: #666;
+}
+
+/* ---------- Prompt form ---------- */
+#logit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    width: 95%;
+    margin: 0 auto;
+    font: 13px system-ui, sans-serif;   /* .content-pane sets font-size: 0 */
+    text-align: left;
+}
+
+#logit-form label {
+    color: #374151;
+}
+
+#logit-run {
+    padding: 6px 12px;
+    font: inherit;
+    cursor: pointer;
+}
+
+#logit-run:disabled {
+    cursor: progress;
+    opacity: 0.6;
+}
