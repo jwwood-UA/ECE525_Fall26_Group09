@@ -42,4 +42,4 @@ app.mount("/", StaticFiles(directory=str(folderPath / "static"),html=True), name
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app:app", host="127.0.0.1", port=8767, reload=True)
+    uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True, reload_dirs=[str(folderPath.parent.parent)])
