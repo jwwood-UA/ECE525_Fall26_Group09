@@ -6,6 +6,76 @@
         <script src="index.js"></script>
     </head>
     <body>
-        
+        <div id="navbar">
+            <div class="nav-btn nav-selected">
+                <h1>1: Logits</h1>
+            </div>
+            <div class="nav-btn">
+                <h1>2: Patching</h1>
+            </div>
+            <div class="nav-btn">
+                <h1>3:         </h1>
+            </div>
+            <div class="nav-btn">
+                <h1>4:         </h1>
+            </div>
+            <div class="nav-btn">
+                <h1>5:         </h1>
+            </div>
+        </div>
+        <div id="logit-content" class="content-pane">
+            <div id="logit-popup" class="inactive"></div>
+            <div class="demo-info">
+                <div>
+                    
+                </div>
+                <div>
+                    <form id="logit-form">
+                        <input type="text" id="logit-prompt" maxlength="500" placeholder="Enter a prompt, e.g. The Eiffel Tower is in" required>
+                        <label for="logit-count-input">Top-N predictions (1–10)</label>
+                        <input type="number" id="logit-count-input" min="1" max="10" step="1" value="5">
+                        <button type="submit" id="logit-run">Run</button>
+                    </form>
+                </div>
+            </div>
+            <div class="demo-content">
+                <div class="grid-scroll">
+                    <table class="grid">
+                        <thead>
+                        <tr>
+                            <th>Layer</th>
+                            <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>The</th>
+                            <td>…</td><td>…</td><td>…</td><td>…</td><td>…</td>
+                        </tr>
+                        <tr>
+                            <th> Eiffel</th>
+                            <td>…</td><td>…</td><td>…</td><td>…</td><td>…</td>
+                        </tr>
+                        <tr>
+                            <th> Tower</th>
+                            <td>…</td><td>…</td><td>…</td><td>…</td><td>…</td>
+                        </tr>
+                        <tr>
+                            <th> is</th>
+                            <td>…</td><td>…</td><td>…</td><td>…</td><td>…</td>
+                        </tr>
+                        <tr>
+                            <th> in</th>
+                            <td>…</td><td>…</td><td>…</td><td>…</td><td>…</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="colorbar" id="logit-colorbar"></div>
+            </div>
+        </div>
+        <div id="patch-content" class="content-pane inactive">
+
+        </div>
     </body>
 </html>
