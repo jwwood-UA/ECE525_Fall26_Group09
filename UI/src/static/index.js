@@ -36,27 +36,27 @@ const fill_logit_lens = (logit_data) => {
     unpin_popup();                       // old cells are about to be replaced
     // Each cell is N predictions followed by the true-next-token entry,
     // so N comes from the data itself rather than what was requested
-    const N = logit_data[0][1][0].length - 1;
+    const N = logit_data.top_k;
     logit_state = {"data":logit_data,"N":N};
-    const nLayers = logit_data[0][1].length;
+    const nLayers = logit_data.n_layers;
     let logit_grid = "<thead><tr><th>Token</th>";
     for (let l=0; l<nLayers; l++) logit_grid += `<th>${l}</th>`;
     logit_grid += "</tr></thead><tbody>";
     let tok = -1;
-    for(const token_data of logit_data){
+    for(const token_data of logit_data.tokens){
         tok+=1;
-        const token = escape_token(token_data[0]);
+        const token = escape_token(token_data.text);
         logit_grid += `<tr><th><span class="tok">${token}</span></th>`;
         let lay = -1;
-        for(const layer_data of token_data[1]){
+        for(const layer_data of logit_data.results.slice(tok*nLayers,(tok+1)*nLayers)){
             lay+=1;
-            const top_p = Number(layer_data[0][1]);
+            const top_p = Number(layer_data.predictions[0].probability);
             const text_class = top_p > 0.55 ? " dark" : ""; // white text on dark backgrounds
             logit_grid += `<td data-pos="${tok}" data-layer="${lay}" style="background:${prob_color(top_p)}"><div class="cell${text_class}">`; // open layer box
-            logit_grid += `<span class="top-pred tok">${escape_token(layer_data[0][0])}</span>`; // show highest confidence
-            // Add banner to see true next token's position if there is a next prompt token
-            if (layer_data[N].length>0){
-                logit_grid += `<p class="true-next-token-banner"><span class="tok">${escape_token(layer_data[N][0])}</span>: ${Number(layer_data[N][2])}</p>`;
+            logit_grid += `<span class="top-pred tok">${escape_token(layer_data.predictions[0].token)}</span>`; // show highest confidence
+            // Add banner to see true next token's position if there is a next token
+            if(layer_data.reference_token){
+                logit_grid += `<p class="true-next-token-banner"><span class="tok">${escape_token(layer_data.reference_token.token)}</span>: ${Number(layer_data.reference_token.rank)}</p>`;
             }
             logit_grid += "</div></td>"; // close layer box
         }
@@ -111,19 +111,20 @@ const show_popup = (td) => {
     const { data, N } = logit_state;
     const pos = +td.dataset.pos;
     const layer = +td.dataset.layer;
-    const cell = data[pos][1][layer];
-    const truth = cell[N];                        // [token, prob, rank], or [] at the last position
-    const has_truth = truth.length > 0;
+    const celldat = data.results[pos*data.n_layers + layer];
+    const truthdat = celldat.reference_token;
+    const has_truth = truthdat!==null;
 
     const rows = [];
     for (let i = 0; i < N; i++) {
-        const [tok, p] = cell[i];
-        rows.push(popup_row(i + 1, tok, p, has_truth && tok === truth[0]));
+        const tok = celldat.predictions[i].token;
+        const p = celldat.predictions[i].probability;
+        rows.push(popup_row(i + 1, tok, p, has_truth && tok === truthdat.token));
     }
     // True next token ranked outside the top N: show it below a separator
-    if (has_truth && truth[2] > N) {
+    if (has_truth && truthdat.rank > N) {
         rows.push(`<li class="popup-sep"></li>`);
-        rows.push(popup_row(`#${truth[2]}`, truth[0], truth[1], true));
+        rows.push(popup_row(`#${truthdat.rank}`, truthdat.token, truthdat.probability, true));
     }
 
     const note = has_truth
@@ -134,7 +135,7 @@ const show_popup = (td) => {
     logit_popup.innerHTML = `
         <div class="popup-title">
             Layer ${layer}
-            <span class="popup-sub">after <span class="popup-tok">${escape_token(data[pos][0])}</span></span>
+            <span class="popup-sub">after <span class="popup-tok">${escape_token(data.tokens[pos].text)}</span></span>
         </div>
         <ol class="popup-rows">${rows.join("")}</ol>
         <div class="popup-note">${note}${pin_hint}</div>`;

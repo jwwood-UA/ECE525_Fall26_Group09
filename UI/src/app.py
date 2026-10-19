@@ -2,10 +2,22 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
+import sys
+from pathlib import Path
+folderPath = Path(__file__).resolve().parent
+sys.path.append(str(folderPath.parent.parent / "backend"))
+from logit_lens import GPT2LogitLens
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Load once at startup, never per request
+    gpt2_model = GPT2LogitLens(
+        model="gpt2",
+        device="cpu",
+        cache_dir=None,
+        local_files_only=False,
+    )
+    app.state = {"gpt2": gpt2_model}
     yield
 
 app = FastAPI(lifespan=lifespan)
@@ -13,51 +25,20 @@ app = FastAPI(lifespan=lifespan)
 class LensRequest(BaseModel):
     prompt: str = Field(max_length=500)
     top_k: int = Field(default=5, ge=1, le=10)
+    model: str = Field(max_length=10, default="gpt2")
+    max_new_tokens: int = Field(default=1, ge=1, le=5)
 
-# TODO: trigger logit lens run with prompt and return json data
-# TODO: define json return format
 @app.post("/api/logit_lens")
 def logit_lens(req: LensRequest):
-    # return placeholder data
-    return [
-        ["The", [
-            [[" first",0.031],[" same",0.024],[" new",0.019],[" most",0.015],[" other",0.012],[" Eiffel",0.00002,8721]],
-            [[" first",0.045],[" new",0.033],[" same",0.027],[" world",0.018],[" United",0.014],[" Eiffel",0.00005,4210]],
-            [[" first",0.052],[" new",0.040],[" following",0.029],[" United",0.021],[" last",0.017],[" Eiffel",0.0001,1893]],
-            [[" first",0.061],[" following",0.044],[" new",0.038],[" United",0.025],[" last",0.020],[" Eiffel",0.0002,904]],
-            [[" first",0.068],[" new",0.047],[" following",0.041],[" same",0.026],[" United",0.022],[" Eiffel",0.0003,612]]
-        ]],
-        [" Eiffel", [
-            [[" Eiffel",0.080],["el",0.040],[" Tower",0.030],["s",0.020],[",",0.015],[" Tower",0.030,3]],
-            [[" Tower",0.210],[" tower",0.090],[" Eiffel",0.050],[",",0.020],[" Bridge",0.015],[" Tower",0.210,1]],
-            [[" Tower",0.580],[" tower",0.110],[" Towers",0.040],[" Bridge",0.020],[",",0.010],[" Tower",0.580,1]],
-            [[" Tower",0.830],[" tower",0.060],[" Towers",0.020],[" Bridge",0.010],[" Park",0.005],[" Tower",0.830,1]],
-            [[" Tower",0.940],[" tower",0.020],[" Towers",0.010],[",",0.004],[" Park",0.003],[" Tower",0.940,1]]
-        ]],
-        [" Tower", [
-            [[" Tower",0.060],[" of",0.050],[",",0.040],[" and",0.030],[" in",0.020],[" is",0.012,9]],
-            [[",",0.090],[" in",0.070],[" of",0.060],[" and",0.050],[" is",0.040],[" is",0.040,5]],
-            [[",",0.140],[" is",0.110],[" in",0.090],[" was",0.070],[".",0.050],[" is",0.110,2]],
-            [[" is",0.190],[",",0.150],[" in",0.100],[" was",0.080],[" has",0.050],[" is",0.190,1]],
-            [[" is",0.240],[",",0.160],[" in",0.110],[" was",0.090],[" has",0.060],[" is",0.240,1]]
-        ]],
-        [" is", [
-            [[" a",0.070],[" the",0.050],[" not",0.040],[" is",0.030],[" an",0.020],[" in",0.011,11]],
-            [[" a",0.100],[" the",0.070],[" located",0.040],[" one",0.030],[" in",0.025],[" in",0.025,5]],
-            [[" located",0.150],[" a",0.110],[" in",0.080],[" one",0.060],[" the",0.050],[" in",0.080,3]],
-            [[" located",0.220],[" a",0.120],[" in",0.100],[" one",0.070],[" the",0.050],[" in",0.100,3]],
-            [[" a",0.180],[" located",0.170],[" one",0.110],[" the",0.080],[" in",0.070],[" in",0.070,5]]
-        ]],
-        [" in", [
-            [[" the",0.090],[" a",0.050],[" in",0.030],[" order",0.020],[" which",0.015],[]],
-            [[" the",0.140],[" a",0.060],[" Paris",0.030],[" France",0.025],[" which",0.020],[]],
-            [[" Paris",0.210],[" the",0.150],[" France",0.070],[" a",0.040],[" London",0.020],[]],
-            [[" Paris",0.440],[" the",0.120],[" France",0.080],[" central",0.030],[" a",0.020],[]],
-            [[" Paris",0.620],[" the",0.090],[" France",0.070],[" central",0.020],[" downtown",0.015],[]]
-        ]]
-    ]
+    return app.state[req.model].analyze(
+        prompt=req.prompt,
+        max_new_tokens=req.max_new_tokens,
+        model=req.model,
+        top_k=req.top_k,
+    )
+    
 
-app.mount("/", StaticFiles(directory="static",html=True), name="static")
+app.mount("/", StaticFiles(directory=str(folderPath / "static"),html=True), name="static")
 
 if __name__ == "__main__":
     import uvicorn
