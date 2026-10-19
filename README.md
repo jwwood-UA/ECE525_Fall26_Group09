@@ -43,7 +43,6 @@ Open a web browser to ```localhost:8000```
 | FastAPI server (serves UI) | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
 | GPT-2 logit lens backend | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
 | UI ↔ backend integration | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
-| Prompt input and Top-N control (1–10, default 5) | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
 | Logit lens grid UI | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
 | Client round-trip latency measurement | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
 | Server-side timing breakdown (compute vs. network) | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
@@ -53,8 +52,8 @@ Open a web browser to ```localhost:8000```
 | Activation patching Backend | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
 | Guided tutorial content | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
 
-**Legend:**
-![Finalized](https://img.shields.io/badge/Finalized-2ea44f?style=flat-square) complete and polished ·
-![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) works end-to-end, may still change ·
-![Started](https://img.shields.io/badge/Started-e3b341?style=flat-square) in progress ·
+**Legend:**  
+![Finalized](https://img.shields.io/badge/Finalized-2ea44f?style=flat-square) complete and polished  
+![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) works end-to-end, may still change  
+![Started](https://img.shields.io/badge/Started-e3b341?style=flat-square) in progress  
 ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) planned
