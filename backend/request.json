@@ -1,0 +1,6 @@
+{
+  "prompt": "The capital of France is",
+  "max_new_tokens": 1,
+  "model": "gpt2",
+  "top_k": 5
+}

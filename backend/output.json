@@ -1,0 +1,3172 @@
+{
+  "schema_version": "1.1",
+  "request_id": "51e0905f-4715-4723-9701-03bef9352f32",
+  "status": "success",
+  "model": "gpt2",
+  "method": "logit_lens",
+  "is_mock": false,
+  "input_text": "The capital of France is",
+  "max_new_tokens": 1,
+  "top_k": 5,
+  "n_layers": 12,
+  "context_window": 1024,
+  "input_token_count": 5,
+  "generated_token_count": 1,
+  "generated_text": " the",
+  "output_text": "The capital of France is the",
+  "stop_reason": "max_new_tokens",
+  "tokens": [
+    {
+      "position": 0,
+      "token_id": 464,
+      "text": "The",
+      "source": "input",
+      "generation_step": null
+    },
+    {
+      "position": 1,
+      "token_id": 3139,
+      "text": " capital",
+      "source": "input",
+      "generation_step": null
+    },
+    {
+      "position": 2,
+      "token_id": 286,
+      "text": " of",
+      "source": "input",
+      "generation_step": null
+    },
+    {
+      "position": 3,
+      "token_id": 4881,
+      "text": " France",
+      "source": "input",
+      "generation_step": null
+    },
+    {
+      "position": 4,
+      "token_id": 318,
+      "text": " is",
+      "source": "input",
+      "generation_step": null
+    },
+    {
+      "position": 5,
+      "token_id": 262,
+      "text": " the",
+      "source": "generated",
+      "generation_step": 0
+    }
+  ],
+  "results": [
+    {
+      "block_index": 0,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.02498384565114975,
+          "rank": 1
+        },
+        {
+          "token_id": 2677,
+          "token": " King",
+          "probability": 0.017279429361224174,
+          "rank": 2
+        },
+        {
+          "token_id": 717,
+          "token": " first",
+          "probability": 0.01138676144182682,
+          "rank": 3
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.010218963027000427,
+          "rank": 4
+        },
+        {
+          "token_id": 2274,
+          "token": " recent",
+          "probability": 0.00980473030358553,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 3157,
+        "probability": 3.7891255487920716e-05
+      }
+    },
+    {
+      "block_index": 1,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.04746957868337631,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.03519827499985695,
+          "rank": 2
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.03048601560294628,
+          "rank": 3
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.02188948169350624,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.019815800711512566,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1531,
+        "probability": 6.620634667342529e-05
+      }
+    },
+    {
+      "block_index": 2,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.026063021272420883,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.024294527247548103,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.016434645280241966,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.014744047075510025,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013401205651462078,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1716,
+        "probability": 6.626851245528087e-05
+      }
+    },
+    {
+      "block_index": 3,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.026351766660809517,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.024675026535987854,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.016631992533802986,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.01485765352845192,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013530250638723373,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1723,
+        "probability": 6.557408778462559e-05
+      }
+    },
+    {
+      "block_index": 4,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.02613660879433155,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.024662721902132034,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.016605611890554428,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.01474455464631319,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013471991755068302,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1738,
+        "probability": 6.526408105855808e-05
+      }
+    },
+    {
+      "block_index": 5,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.02568391151726246,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.02442525140941143,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.016450166702270508,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.014524508267641068,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.01329738087952137,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1740,
+        "probability": 6.528726953547448e-05
+      }
+    },
+    {
+      "block_index": 6,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.025425344705581665,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.024337386712431908,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.016382798552513123,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.014385415241122246,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013194124214351177,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1745,
+        "probability": 6.515355198644102e-05
+      }
+    },
+    {
+      "block_index": 7,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.025334389880299568,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.02436915785074234,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.016383707523345947,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.014351638033986092,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013144509866833687,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1755,
+        "probability": 6.470158405136317e-05
+      }
+    },
+    {
+      "block_index": 8,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.02531290613114834,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.024552619084715843,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.01648259535431862,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.014406198635697365,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013166896067559719,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1757,
+        "probability": 6.464495527325198e-05
+      }
+    },
+    {
+      "block_index": 9,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.02531810849905014,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.024751169607043266,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.016540979966521263,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.014441466890275478,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013197293505072594,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1752,
+        "probability": 6.477013084804639e-05
+      }
+    },
+    {
+      "block_index": 10,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.02550201117992401,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.025134099647402763,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.01677357777953148,
+          "rank": 3
+        },
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.014521323144435883,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013299503363668919,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1746,
+        "probability": 6.485858466476202e-05
+      }
+    },
+    {
+      "block_index": 11,
+      "token_position": 0,
+      "target_token_position": 1,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 198,
+          "token": "\n",
+          "probability": 0.01359968539327383,
+          "rank": 1
+        },
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.009974482469260693,
+          "rank": 2
+        },
+        {
+          "token_id": 366,
+          "token": " \"",
+          "probability": 0.008197120390832424,
+          "rank": 3
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.006270820740610361,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.005152493715286255,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 3139,
+        "token": " capital",
+        "rank": 1412,
+        "probability": 0.0001151089309132658
+      }
+    },
+    {
+      "block_index": 0,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.9995125532150269,
+          "rank": 1
+        },
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 6.397227116394788e-05,
+          "rank": 2
+        },
+        {
+          "token_id": 44590,
+          "token": " capitals",
+          "probability": 3.247170752729289e-05,
+          "rank": 3
+        },
+        {
+          "token_id": 9747,
+          "token": " Capital",
+          "probability": 2.0898834918625653e-05,
+          "rank": 4
+        },
+        {
+          "token_id": 26573,
+          "token": " claw",
+          "probability": 1.8306020137970336e-05,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 78,
+        "probability": 7.878920200710127e-07
+      }
+    },
+    {
+      "block_index": 1,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.9997885823249817,
+          "rank": 1
+        },
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 3.632989319157787e-05,
+          "rank": 2
+        },
+        {
+          "token_id": 9837,
+          "token": " punishment",
+          "probability": 3.5913519241148606e-05,
+          "rank": 3
+        },
+        {
+          "token_id": 4896,
+          "token": " investment",
+          "probability": 1.9789535144809633e-05,
+          "rank": 4
+        },
+        {
+          "token_id": 7389,
+          "token": " penalty",
+          "probability": 9.676775334810372e-06,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 76,
+        "probability": 2.227530018217294e-07
+      }
+    },
+    {
+      "block_index": 2,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.9989643096923828,
+          "rank": 1
+        },
+        {
+          "token_id": 9837,
+          "token": " punishment",
+          "probability": 0.0003712235775310546,
+          "rank": 2
+        },
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.0002341309009352699,
+          "rank": 3
+        },
+        {
+          "token_id": 4896,
+          "token": " investment",
+          "probability": 6.986482185311615e-05,
+          "rank": 4
+        },
+        {
+          "token_id": 6721,
+          "token": " reward",
+          "probability": 4.8983594751916826e-05,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 32,
+        "probability": 1.7984183386943187e-06
+      }
+    },
+    {
+      "block_index": 3,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.9943760633468628,
+          "rank": 1
+        },
+        {
+          "token_id": 9837,
+          "token": " punishment",
+          "probability": 0.0038967295549809933,
+          "rank": 2
+        },
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.0007339249714277685,
+          "rank": 3
+        },
+        {
+          "token_id": 4074,
+          "token": " ship",
+          "probability": 0.000222564980504103,
+          "rank": 4
+        },
+        {
+          "token_id": 1368,
+          "token": " attack",
+          "probability": 8.882115071173757e-05,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 26,
+        "probability": 6.6575462369655725e-06
+      }
+    },
+    {
+      "block_index": 4,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.7948315739631653,
+          "rank": 1
+        },
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.11527726799249649,
+          "rank": 2
+        },
+        {
+          "token_id": 9837,
+          "token": " punishment",
+          "probability": 0.04325173795223236,
+          "rank": 3
+        },
+        {
+          "token_id": 4736,
+          "token": " cities",
+          "probability": 0.004559413064271212,
+          "rank": 4
+        },
+        {
+          "token_id": 2346,
+          "token": " itself",
+          "probability": 0.0039941067807376385,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 8,
+        "probability": 0.002262393943965435
+      }
+    },
+    {
+      "block_index": 5,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.4573999345302582,
+          "rank": 1
+        },
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.33078262209892273,
+          "rank": 2
+        },
+        {
+          "token_id": 9837,
+          "token": " punishment",
+          "probability": 0.056902926415205,
+          "rank": 3
+        },
+        {
+          "token_id": 4736,
+          "token": " cities",
+          "probability": 0.02223612368106842,
+          "rank": 4
+        },
+        {
+          "token_id": 286,
+          "token": " of",
+          "probability": 0.012760160490870476,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 5,
+        "probability": 0.012760160490870476
+      }
+    },
+    {
+      "block_index": 6,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.679144024848938,
+          "rank": 1
+        },
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.1930045187473297,
+          "rank": 2
+        },
+        {
+          "token_id": 4736,
+          "token": " cities",
+          "probability": 0.04102979227900505,
+          "rank": 3
+        },
+        {
+          "token_id": 286,
+          "token": " of",
+          "probability": 0.016933346167206764,
+          "rank": 4
+        },
+        {
+          "token_id": 27953,
+          "token": " metropolitan",
+          "probability": 0.008206021040678024,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 4,
+        "probability": 0.016933346167206764
+      }
+    },
+    {
+      "block_index": 7,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.7577211856842041,
+          "rank": 1
+        },
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.10691151767969131,
+          "rank": 2
+        },
+        {
+          "token_id": 4736,
+          "token": " cities",
+          "probability": 0.054724231362342834,
+          "rank": 3
+        },
+        {
+          "token_id": 286,
+          "token": " of",
+          "probability": 0.022472022101283073,
+          "rank": 4
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.008004565723240376,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 4,
+        "probability": 0.022472022101283073
+      }
+    },
+    {
+      "block_index": 8,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.7886348366737366,
+          "rank": 1
+        },
+        {
+          "token_id": 4736,
+          "token": " cities",
+          "probability": 0.05893634632229805,
+          "rank": 2
+        },
+        {
+          "token_id": 286,
+          "token": " of",
+          "probability": 0.031656477600336075,
+          "rank": 3
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.025621823966503143,
+          "rank": 4
+        },
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.019403180107474327,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 3,
+        "probability": 0.031656477600336075
+      }
+    },
+    {
+      "block_index": 9,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.8295976519584656,
+          "rank": 1
+        },
+        {
+          "token_id": 4736,
+          "token": " cities",
+          "probability": 0.058964524418115616,
+          "rank": 2
+        },
+        {
+          "token_id": 318,
+          "token": " is",
+          "probability": 0.0251240786164999,
+          "rank": 3
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.01704694703221321,
+          "rank": 4
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.01268506795167923,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 6,
+        "probability": 0.007082976866513491
+      }
+    },
+    {
+      "block_index": 10,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.6099233031272888,
+          "rank": 1
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.06158473715186119,
+          "rank": 2
+        },
+        {
+          "token_id": 286,
+          "token": " of",
+          "probability": 0.0497620515525341,
+          "rank": 3
+        },
+        {
+          "token_id": 4736,
+          "token": " cities",
+          "probability": 0.04429846629500389,
+          "rank": 4
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.0357244573533535,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 3,
+        "probability": 0.0497620515525341
+      }
+    },
+    {
+      "block_index": 11,
+      "token_position": 1,
+      "target_token_position": 2,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 286,
+          "token": " of",
+          "probability": 0.1642230749130249,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.1192149817943573,
+          "rank": 2
+        },
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.10783742368221283,
+          "rank": 3
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.07227390259504318,
+          "rank": 4
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.07098422944545746,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 286,
+        "token": " of",
+        "rank": 1,
+        "probability": 0.1642230749130249
+      }
+    },
+    {
+      "block_index": 0,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.7110807299613953,
+          "rank": 1
+        },
+        {
+          "token_id": 1781,
+          "token": " course",
+          "probability": 0.05342138186097145,
+          "rank": 2
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.02669208124279976,
+          "rank": 3
+        },
+        {
+          "token_id": 428,
+          "token": " this",
+          "probability": 0.010677370242774487,
+          "rank": 4
+        },
+        {
+          "token_id": 674,
+          "token": " our",
+          "probability": 0.0101934764534235,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 9551,
+        "probability": 4.3461972154545947e-07
+      }
+    },
+    {
+      "block_index": 1,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.7567836046218872,
+          "rank": 1
+        },
+        {
+          "token_id": 1781,
+          "token": " course",
+          "probability": 0.09523528814315796,
+          "rank": 2
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.013802750036120415,
+          "rank": 3
+        },
+        {
+          "token_id": 674,
+          "token": " our",
+          "probability": 0.010187458246946335,
+          "rank": 4
+        },
+        {
+          "token_id": 663,
+          "token": " its",
+          "probability": 0.009721014648675919,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 9196,
+        "probability": 1.7937713892024476e-07
+      }
+    },
+    {
+      "block_index": 2,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.627761960029602,
+          "rank": 1
+        },
+        {
+          "token_id": 1781,
+          "token": " course",
+          "probability": 0.23212164640426636,
+          "rank": 2
+        },
+        {
+          "token_id": 674,
+          "token": " our",
+          "probability": 0.012698487378656864,
+          "rank": 3
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.011796253733336926,
+          "rank": 4
+        },
+        {
+          "token_id": 663,
+          "token": " its",
+          "probability": 0.005542714148759842,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 7294,
+        "probability": 3.534091490564606e-07
+      }
+    },
+    {
+      "block_index": 3,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.8012475967407227,
+          "rank": 1
+        },
+        {
+          "token_id": 1781,
+          "token": " course",
+          "probability": 0.06515911221504211,
+          "rank": 2
+        },
+        {
+          "token_id": 674,
+          "token": " our",
+          "probability": 0.01584755629301071,
+          "rank": 3
+        },
+        {
+          "token_id": 13408,
+          "token": " Hope",
+          "probability": 0.015278827399015427,
+          "rank": 4
+        },
+        {
+          "token_id": 5245,
+          "token": " Dam",
+          "probability": 0.005529939197003841,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 2204,
+        "probability": 2.601784444777877e-06
+      }
+    },
+    {
+      "block_index": 4,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.7919020652770996,
+          "rank": 1
+        },
+        {
+          "token_id": 674,
+          "token": " our",
+          "probability": 0.05444232001900673,
+          "rank": 2
+        },
+        {
+          "token_id": 2968,
+          "token": " popular",
+          "probability": 0.010189646854996681,
+          "rank": 3
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.008540580980479717,
+          "rank": 4
+        },
+        {
+          "token_id": 616,
+          "token": " my",
+          "probability": 0.006926403380930424,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 2787,
+        "probability": 1.7522661437396891e-06
+      }
+    },
+    {
+      "block_index": 5,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.6908693313598633,
+          "rank": 1
+        },
+        {
+          "token_id": 674,
+          "token": " our",
+          "probability": 0.03628497198224068,
+          "rank": 2
+        },
+        {
+          "token_id": 3517,
+          "token": " British",
+          "probability": 0.012388358823955059,
+          "rank": 3
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.010022930800914764,
+          "rank": 4
+        },
+        {
+          "token_id": 616,
+          "token": " my",
+          "probability": 0.009807449765503407,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 697,
+        "probability": 3.626915713539347e-05
+      }
+    },
+    {
+      "block_index": 6,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.4647889733314514,
+          "rank": 1
+        },
+        {
+          "token_id": 2807,
+          "token": " China",
+          "probability": 0.04593079537153244,
+          "rank": 2
+        },
+        {
+          "token_id": 9589,
+          "token": " Pennsylvania",
+          "probability": 0.02935580164194107,
+          "rank": 3
+        },
+        {
+          "token_id": 674,
+          "token": " our",
+          "probability": 0.024363229051232338,
+          "rank": 4
+        },
+        {
+          "token_id": 3517,
+          "token": " British",
+          "probability": 0.01815231330692768,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 208,
+        "probability": 0.00030345426057465374
+      }
+    },
+    {
+      "block_index": 7,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.5986453890800476,
+          "rank": 1
+        },
+        {
+          "token_id": 3517,
+          "token": " British",
+          "probability": 0.03344815969467163,
+          "rank": 2
+        },
+        {
+          "token_id": 2807,
+          "token": " China",
+          "probability": 0.03024136833846569,
+          "rank": 3
+        },
+        {
+          "token_id": 2692,
+          "token": " Israel",
+          "probability": 0.02179819345474243,
+          "rank": 4
+        },
+        {
+          "token_id": 2258,
+          "token": " North",
+          "probability": 0.01420556753873825,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 55,
+        "probability": 0.0010321910958737135
+      }
+    },
+    {
+      "block_index": 8,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.3351992070674896,
+          "rank": 1
+        },
+        {
+          "token_id": 2807,
+          "token": " China",
+          "probability": 0.08218703418970108,
+          "rank": 2
+        },
+        {
+          "token_id": 2692,
+          "token": " Israel",
+          "probability": 0.06174485757946968,
+          "rank": 3
+        },
+        {
+          "token_id": 2258,
+          "token": " North",
+          "probability": 0.041501302272081375,
+          "rank": 4
+        },
+        {
+          "token_id": 3794,
+          "token": " India",
+          "probability": 0.03540375456213951,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 18,
+        "probability": 0.0085300263017416
+      }
+    },
+    {
+      "block_index": 9,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 2807,
+          "token": " China",
+          "probability": 0.15335913002490997,
+          "rank": 1
+        },
+        {
+          "token_id": 2692,
+          "token": " Israel",
+          "probability": 0.07172592729330063,
+          "rank": 2
+        },
+        {
+          "token_id": 3794,
+          "token": " India",
+          "probability": 0.06956491619348526,
+          "rank": 3
+        },
+        {
+          "token_id": 4486,
+          "token": " Germany",
+          "probability": 0.05696474760770798,
+          "rank": 4
+        },
+        {
+          "token_id": 2031,
+          "token": " Europe",
+          "probability": 0.052006129175424576,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 15,
+        "probability": 0.014883694238960743
+      }
+    },
+    {
+      "block_index": 10,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.2638761103153229,
+          "rank": 1
+        },
+        {
+          "token_id": 2692,
+          "token": " Israel",
+          "probability": 0.03724692016839981,
+          "rank": 2
+        },
+        {
+          "token_id": 3794,
+          "token": " India",
+          "probability": 0.030945640057325363,
+          "rank": 3
+        },
+        {
+          "token_id": 2807,
+          "token": " China",
+          "probability": 0.024519266560673714,
+          "rank": 4
+        },
+        {
+          "token_id": 4486,
+          "token": " Germany",
+          "probability": 0.022665373980998993,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 17,
+        "probability": 0.009695297107100487
+      }
+    },
+    {
+      "block_index": 11,
+      "token_position": 2,
+      "target_token_position": 3,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.23868073523044586,
+          "rank": 1
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.019157100468873978,
+          "rank": 2
+        },
+        {
+          "token_id": 2692,
+          "token": " Israel",
+          "probability": 0.01678386516869068,
+          "rank": 3
+        },
+        {
+          "token_id": 3284,
+          "token": " Russia",
+          "probability": 0.014027616009116173,
+          "rank": 4
+        },
+        {
+          "token_id": 4068,
+          "token": " Iran",
+          "probability": 0.011541532352566719,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 4881,
+        "token": " France",
+        "rank": 14,
+        "probability": 0.006539742927998304
+      }
+    },
+    {
+      "block_index": 0,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 4881,
+          "token": " France",
+          "probability": 0.29603004455566406,
+          "rank": 1
+        },
+        {
+          "token_id": 45996,
+          "token": " Marse",
+          "probability": 0.1494004726409912,
+          "rank": 2
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.08271244168281555,
+          "rank": 3
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.04812247306108475,
+          "rank": 4
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.018740249797701836,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 97,
+        "probability": 0.000698064744938165
+      }
+    },
+    {
+      "block_index": 1,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.33636778593063354,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.06840304285287857,
+          "rank": 2
+        },
+        {
+          "token_id": 4332,
+          "token": " Press",
+          "probability": 0.05947135388851166,
+          "rank": 3
+        },
+        {
+          "token_id": 4881,
+          "token": " France",
+          "probability": 0.05342232435941696,
+          "rank": 4
+        },
+        {
+          "token_id": 26923,
+          "token": " Connection",
+          "probability": 0.05061166733503342,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 138,
+        "probability": 0.0004657045938074589
+      }
+    },
+    {
+      "block_index": 2,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.5106927752494812,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.07137291878461838,
+          "rank": 2
+        },
+        {
+          "token_id": 4332,
+          "token": " Press",
+          "probability": 0.051430076360702515,
+          "rank": 3
+        },
+        {
+          "token_id": 26923,
+          "token": " Connection",
+          "probability": 0.01919110119342804,
+          "rank": 4
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.018290434032678604,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 44,
+        "probability": 0.00176864059176296
+      }
+    },
+    {
+      "block_index": 3,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.7240790724754333,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.0786767452955246,
+          "rank": 2
+        },
+        {
+          "token_id": 4332,
+          "token": " Press",
+          "probability": 0.01076736580580473,
+          "rank": 3
+        },
+        {
+          "token_id": 3738,
+          "token": " Ant",
+          "probability": 0.010220513679087162,
+          "rank": 4
+        },
+        {
+          "token_id": 406,
+          "token": " L",
+          "probability": 0.0074947006069123745,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 28,
+        "probability": 0.001439182786270976
+      }
+    },
+    {
+      "block_index": 4,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.7548421025276184,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.13733592629432678,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.015323786064982414,
+          "rank": 3
+        },
+        {
+          "token_id": 4332,
+          "token": " Press",
+          "probability": 0.004375683143734932,
+          "rank": 4
+        },
+        {
+          "token_id": 3738,
+          "token": " Ant",
+          "probability": 0.004222573712468147,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 8,
+        "probability": 0.002727244980633259
+      }
+    },
+    {
+      "block_index": 5,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.6980593800544739,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.19697408378124237,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.03194228559732437,
+          "rank": 3
+        },
+        {
+          "token_id": 4332,
+          "token": " Press",
+          "probability": 0.006828877609223127,
+          "rank": 4
+        },
+        {
+          "token_id": 318,
+          "token": " is",
+          "probability": 0.002960043027997017,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 5,
+        "probability": 0.002960043027997017
+      }
+    },
+    {
+      "block_index": 6,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.619083046913147,
+          "rank": 1
+        },
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.2914568781852722,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.028152888640761375,
+          "rank": 3
+        },
+        {
+          "token_id": 318,
+          "token": " is",
+          "probability": 0.003669957397505641,
+          "rank": 4
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.0026614319067448378,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 4,
+        "probability": 0.003669957397505641
+      }
+    },
+    {
+      "block_index": 7,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.5048565864562988,
+          "rank": 1
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.39501604437828064,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.04370025545358658,
+          "rank": 3
+        },
+        {
+          "token_id": 318,
+          "token": " is",
+          "probability": 0.016396788880228996,
+          "rank": 4
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.008951429277658463,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 4,
+        "probability": 0.016396788880228996
+      }
+    },
+    {
+      "block_index": 8,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.6130311489105225,
+          "rank": 1
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.27907055616378784,
+          "rank": 2
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.051335565745830536,
+          "rank": 3
+        },
+        {
+          "token_id": 318,
+          "token": " is",
+          "probability": 0.02268597111105919,
+          "rank": 4
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.006259507033973932,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 4,
+        "probability": 0.02268597111105919
+      }
+    },
+    {
+      "block_index": 9,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.6711001992225647,
+          "rank": 1
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.2189173847436905,
+          "rank": 2
+        },
+        {
+          "token_id": 318,
+          "token": " is",
+          "probability": 0.05182723328471184,
+          "rank": 3
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.026371784508228302,
+          "rank": 4
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.012767895124852657,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 3,
+        "probability": 0.05182723328471184
+      }
+    },
+    {
+      "block_index": 10,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.573209285736084,
+          "rank": 1
+        },
+        {
+          "token_id": 318,
+          "token": " is",
+          "probability": 0.1433984339237213,
+          "rank": 2
+        },
+        {
+          "token_id": 338,
+          "token": "'s",
+          "probability": 0.08605378866195679,
+          "rank": 3
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.08243069797754288,
+          "rank": 4
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.038729965686798096,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 2,
+        "probability": 0.1433984339237213
+      }
+    },
+    {
+      "block_index": 11,
+      "token_position": 3,
+      "target_token_position": 4,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 11,
+          "token": ",",
+          "probability": 0.3749127686023712,
+          "rank": 1
+        },
+        {
+          "token_id": 318,
+          "token": " is",
+          "probability": 0.12164951860904694,
+          "rank": 2
+        },
+        {
+          "token_id": 468,
+          "token": " has",
+          "probability": 0.06736961007118225,
+          "rank": 3
+        },
+        {
+          "token_id": 290,
+          "token": " and",
+          "probability": 0.06572921574115753,
+          "rank": 4
+        },
+        {
+          "token_id": 13,
+          "token": ".",
+          "probability": 0.0656144767999649,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 318,
+        "token": " is",
+        "rank": 2,
+        "probability": 0.12164951860904694
+      }
+    },
+    {
+      "block_index": 0,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.3322327435016632,
+          "rank": 1
+        },
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.12792952358722687,
+          "rank": 2
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.08244762569665909,
+          "rank": 3
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.07256830483675003,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.03822171315550804,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 10,
+        "probability": 0.010054117068648338
+      }
+    },
+    {
+      "block_index": 1,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.2708793580532074,
+          "rank": 1
+        },
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.2564345598220825,
+          "rank": 2
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.1561950296163559,
+          "rank": 3
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.08112528175115585,
+          "rank": 4
+        },
+        {
+          "token_id": 7485,
+          "token": " unlikely",
+          "probability": 0.017377756536006927,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 21,
+        "probability": 0.0029388449620455503
+      }
+    },
+    {
+      "block_index": 2,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.36621755361557007,
+          "rank": 1
+        },
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.17158043384552002,
+          "rank": 2
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.1519104689359665,
+          "rank": 3
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.0922136902809143,
+          "rank": 4
+        },
+        {
+          "token_id": 3058,
+          "token": " currently",
+          "probability": 0.02823627181351185,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 24,
+        "probability": 0.0021623552311211824
+      }
+    },
+    {
+      "block_index": 3,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.5149427056312561,
+          "rank": 1
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.144771546125412,
+          "rank": 2
+        },
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.1261119544506073,
+          "rank": 3
+        },
+        {
+          "token_id": 3058,
+          "token": " currently",
+          "probability": 0.03979625925421715,
+          "rank": 4
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.03761743754148483,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 15,
+        "probability": 0.0030829026363790035
+      }
+    },
+    {
+      "block_index": 4,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.6269257664680481,
+          "rank": 1
+        },
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.08016247302293777,
+          "rank": 2
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.05329178646206856,
+          "rank": 3
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.047427158802747726,
+          "rank": 4
+        },
+        {
+          "token_id": 1541,
+          "token": " already",
+          "probability": 0.03337186202406883,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 12,
+        "probability": 0.006232874467968941
+      }
+    },
+    {
+      "block_index": 5,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.5516774654388428,
+          "rank": 1
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.10900512337684631,
+          "rank": 2
+        },
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.08766186237335205,
+          "rank": 3
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.06779935210943222,
+          "rank": 4
+        },
+        {
+          "token_id": 1541,
+          "token": " already",
+          "probability": 0.02963249199092388,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 25,
+        "probability": 0.0008164510945789516
+      }
+    },
+    {
+      "block_index": 6,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.5723823308944702,
+          "rank": 1
+        },
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.12270884215831757,
+          "rank": 2
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.0559946745634079,
+          "rank": 3
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.049570463597774506,
+          "rank": 4
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.016486825421452522,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 10,
+        "probability": 0.008468040265142918
+      }
+    },
+    {
+      "block_index": 7,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.6891134977340698,
+          "rank": 1
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.06255530565977097,
+          "rank": 2
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.05870645493268967,
+          "rank": 3
+        },
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.04776512086391449,
+          "rank": 4
+        },
+        {
+          "token_id": 1541,
+          "token": " already",
+          "probability": 0.025053294375538826,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 14,
+        "probability": 0.003208473324775696
+      }
+    },
+    {
+      "block_index": 8,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.4226652979850769,
+          "rank": 1
+        },
+        {
+          "token_id": 5140,
+          "token": " located",
+          "probability": 0.14541153609752655,
+          "rank": 2
+        },
+        {
+          "token_id": 635,
+          "token": " also",
+          "probability": 0.0708773136138916,
+          "rank": 3
+        },
+        {
+          "token_id": 407,
+          "token": " not",
+          "probability": 0.07031474262475967,
+          "rank": 4
+        },
+        {
+          "token_id": 991,
+          "token": " still",
+          "probability": 0.048740215599536896,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 11,
+        "probability": 0.010456567630171776
+      }
+    },
+    {
+      "block_index": 9,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 4881,
+          "token": " France",
+          "probability": 0.6212581396102905,
+          "rank": 1
+        },
+        {
+          "token_id": 6342,
+          "token": " Paris",
+          "probability": 0.1819470077753067,
+          "rank": 2
+        },
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.03949301317334175,
+          "rank": 3
+        },
+        {
+          "token_id": 5140,
+          "token": " located",
+          "probability": 0.028724737465381622,
+          "rank": 4
+        },
+        {
+          "token_id": 4141,
+          "token": " French",
+          "probability": 0.011128176003694534,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 12,
+        "probability": 0.0035437841434031725
+      }
+    },
+    {
+      "block_index": 10,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 4881,
+          "token": " France",
+          "probability": 0.24243180453777313,
+          "rank": 1
+        },
+        {
+          "token_id": 6342,
+          "token": " Paris",
+          "probability": 0.1391531527042389,
+          "rank": 2
+        },
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.10279864072799683,
+          "rank": 3
+        },
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.041708577424287796,
+          "rank": 4
+        },
+        {
+          "token_id": 5140,
+          "token": " located",
+          "probability": 0.02295340783894062,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 4,
+        "probability": 0.041708577424287796
+      }
+    },
+    {
+      "block_index": 11,
+      "token_position": 4,
+      "target_token_position": 5,
+      "generation_step": 0,
+      "predictions": [
+        {
+          "token_id": 262,
+          "token": " the",
+          "probability": 0.08459104597568512,
+          "rank": 1
+        },
+        {
+          "token_id": 783,
+          "token": " now",
+          "probability": 0.04794912040233612,
+          "rank": 2
+        },
+        {
+          "token_id": 257,
+          "token": " a",
+          "probability": 0.046161144971847534,
+          "rank": 3
+        },
+        {
+          "token_id": 4881,
+          "token": " France",
+          "probability": 0.0323762446641922,
+          "rank": 4
+        },
+        {
+          "token_id": 6342,
+          "token": " Paris",
+          "probability": 0.032243870198726654,
+          "rank": 5
+        }
+      ],
+      "reference_token": {
+        "token_id": 262,
+        "token": " the",
+        "rank": 1,
+        "probability": 0.08459104597568512
+      }
+    },
+    {
+      "block_index": 0,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 976,
+          "token": " same",
+          "probability": 0.6955539584159851,
+          "rank": 1
+        },
+        {
+          "token_id": 717,
+          "token": " first",
+          "probability": 0.04035172238945961,
+          "rank": 2
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.02539295330643654,
+          "rank": 3
+        },
+        {
+          "token_id": 995,
+          "token": " world",
+          "probability": 0.018446724861860275,
+          "rank": 4
+        },
+        {
+          "token_id": 6846,
+          "token": " latter",
+          "probability": 0.013955519534647465,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 1,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 976,
+          "token": " same",
+          "probability": 0.7916515469551086,
+          "rank": 1
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.03327368572354317,
+          "rank": 2
+        },
+        {
+          "token_id": 717,
+          "token": " first",
+          "probability": 0.027587827295064926,
+          "rank": 3
+        },
+        {
+          "token_id": 6846,
+          "token": " latter",
+          "probability": 0.015602055005729198,
+          "rank": 4
+        },
+        {
+          "token_id": 1708,
+          "token": " following",
+          "probability": 0.014623628929257393,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 2,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 976,
+          "token": " same",
+          "probability": 0.805057168006897,
+          "rank": 1
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.03879457712173462,
+          "rank": 2
+        },
+        {
+          "token_id": 14162,
+          "token": " fastest",
+          "probability": 0.01533035933971405,
+          "rank": 3
+        },
+        {
+          "token_id": 1708,
+          "token": " following",
+          "probability": 0.014071833342313766,
+          "rank": 4
+        },
+        {
+          "token_id": 717,
+          "token": " first",
+          "probability": 0.010485035367310047,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 3,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 976,
+          "token": " same",
+          "probability": 0.44659432768821716,
+          "rank": 1
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.14599177241325378,
+          "rank": 2
+        },
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.1417088508605957,
+          "rank": 3
+        },
+        {
+          "token_id": 14162,
+          "token": " fastest",
+          "probability": 0.03722841292619705,
+          "rank": 4
+        },
+        {
+          "token_id": 1266,
+          "token": " best",
+          "probability": 0.023166123777627945,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 4,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.41685763001441956,
+          "rank": 1
+        },
+        {
+          "token_id": 976,
+          "token": " same",
+          "probability": 0.16620278358459473,
+          "rank": 2
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.052576418966054916,
+          "rank": 3
+        },
+        {
+          "token_id": 717,
+          "token": " first",
+          "probability": 0.03132138028740883,
+          "rank": 4
+        },
+        {
+          "token_id": 13325,
+          "token": " oldest",
+          "probability": 0.02273806557059288,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 5,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.510991096496582,
+          "rank": 1
+        },
+        {
+          "token_id": 976,
+          "token": " same",
+          "probability": 0.16052938997745514,
+          "rank": 2
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.06809014827013016,
+          "rank": 3
+        },
+        {
+          "token_id": 13325,
+          "token": " oldest",
+          "probability": 0.05587781220674515,
+          "rank": 4
+        },
+        {
+          "token_id": 14162,
+          "token": " fastest",
+          "probability": 0.03639167547225952,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 6,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.5716673731803894,
+          "rank": 1
+        },
+        {
+          "token_id": 976,
+          "token": " same",
+          "probability": 0.09304136782884598,
+          "rank": 2
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.05549187585711479,
+          "rank": 3
+        },
+        {
+          "token_id": 13325,
+          "token": " oldest",
+          "probability": 0.021319478750228882,
+          "rank": 4
+        },
+        {
+          "token_id": 5909,
+          "token": " vast",
+          "probability": 0.018383096903562546,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 7,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.8038284778594971,
+          "rank": 1
+        },
+        {
+          "token_id": 13325,
+          "token": " oldest",
+          "probability": 0.027036694809794426,
+          "rank": 2
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.02054353430867195,
+          "rank": 3
+        },
+        {
+          "token_id": 3277,
+          "token": " nation",
+          "probability": 0.013447683304548264,
+          "rank": 4
+        },
+        {
+          "token_id": 976,
+          "token": " same",
+          "probability": 0.012273049913346767,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 8,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.6192700862884521,
+          "rank": 1
+        },
+        {
+          "token_id": 48145,
+          "token": " birthplace",
+          "probability": 0.19458675384521484,
+          "rank": 2
+        },
+        {
+          "token_id": 1578,
+          "token": " United",
+          "probability": 0.026244448497891426,
+          "rank": 3
+        },
+        {
+          "token_id": 4318,
+          "token": " central",
+          "probability": 0.02073052152991295,
+          "rank": 4
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.013376131653785706,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 9,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.39965081214904785,
+          "rank": 1
+        },
+        {
+          "token_id": 48145,
+          "token": " birthplace",
+          "probability": 0.1947014480829239,
+          "rank": 2
+        },
+        {
+          "token_id": 12671,
+          "token": " Netherlands",
+          "probability": 0.08935138583183289,
+          "rank": 3
+        },
+        {
+          "token_id": 1499,
+          "token": " country",
+          "probability": 0.083722323179245,
+          "rank": 4
+        },
+        {
+          "token_id": 4141,
+          "token": " French",
+          "probability": 0.04692215099930763,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 10,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 48145,
+          "token": " birthplace",
+          "probability": 0.21033263206481934,
+          "rank": 1
+        },
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.20149631798267365,
+          "rank": 2
+        },
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.12162256985902786,
+          "rank": 3
+        },
+        {
+          "token_id": 4141,
+          "token": " French",
+          "probability": 0.04194370284676552,
+          "rank": 4
+        },
+        {
+          "token_id": 7372,
+          "token": " centre",
+          "probability": 0.034670960158109665,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    },
+    {
+      "block_index": 11,
+      "token_position": 5,
+      "target_token_position": null,
+      "generation_step": null,
+      "predictions": [
+        {
+          "token_id": 3139,
+          "token": " capital",
+          "probability": 0.16968487203121185,
+          "rank": 1
+        },
+        {
+          "token_id": 1748,
+          "token": " city",
+          "probability": 0.03352963551878929,
+          "rank": 2
+        },
+        {
+          "token_id": 4141,
+          "token": " French",
+          "probability": 0.023680847138166428,
+          "rank": 3
+        },
+        {
+          "token_id": 749,
+          "token": " most",
+          "probability": 0.022423313930630684,
+          "rank": 4
+        },
+        {
+          "token_id": 4387,
+          "token": " largest",
+          "probability": 0.0221205186098814,
+          "rank": 5
+        }
+      ],
+      "reference_token": null
+    }
+  ]
+}
