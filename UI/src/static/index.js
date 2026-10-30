@@ -55,7 +55,7 @@ const fill_logit_lens = (logit_data) => {
         for(const layer_data of logit_data.results.slice(tok*nLayers,(tok+1)*nLayers)){
             lay+=1;
             const top_p = Number(layer_data.predictions[0].probability);
-            const text_class = top_p > 0.35 ? " dark" : ""; // white text on dark backgrounds
+            const text_class = top_p > 0.55 ? " dark" : ""; // white text on dark backgrounds
             logit_grid += `<td data-pos="${tok}" data-layer="${lay}" style="background:${prob_color(top_p)}"><div class="cell${text_class}">`; // open layer box
             logit_grid += `<span class="top-pred tok">${escape_token(layer_data.predictions[0].token)}</span>`; // show highest confidence
             // Add banner to see true next token's position if there is a next token

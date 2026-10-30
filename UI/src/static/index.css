@@ -399,14 +399,11 @@ body {
 
 /* Visible whitespace glyphs (␣ space, ⇥ tab, ↵ newline): muted so they read as markers, not text */
 .ws {
-    color: #9ca3af;
+    color: #656565;
     font-weight: 400;
 }
-.grid .cell.dark .ws {
-    color: rgba(255, 255, 255, 0.7);
-}
-.grid .cell .true-next-token-banner .ws {
-    color: rgba(255, 255, 255, 0.7);
+.grid .cell.dark .ws:not(.true-next-token-banner .ws) {
+    color: #e5e5e5;
 }
 
 /* In the popup rows, wrap long tokens instead of truncating so the full token is readable */
