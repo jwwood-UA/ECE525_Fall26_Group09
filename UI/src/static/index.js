@@ -199,6 +199,7 @@ let lens_controller = null;   // aborts a request when a newer one replaces it
 let last_timing = null;       // { round_trip_ms } for the latency display
 
 const run_lens = (prompt, N) => {
+    const t0 = performance.now();
     if (!prompt.trim()) return;
     if (lens_controller) lens_controller.abort();     // drop the stale request
     lens_controller = new AbortController();
@@ -207,7 +208,6 @@ const run_lens = (prompt, N) => {
     const run_btn = document.getElementById("logit-run");
     run_btn.disabled = true;
     run_btn.textContent = "Running…";
-    const t0 = performance.now();
 
     fetch("/api/logit_lens", {                         // must match the route in app.py
         method: "POST",
@@ -220,9 +220,9 @@ const run_lens = (prompt, N) => {
             return response.json();
         })
         .then(data => {
-            last_timing = { round_trip_ms: performance.now() - t0 };
-            console.debug("logit lens round trip:", last_timing.round_trip_ms.toFixed(1), "ms");
             fill_logit_lens(data);
+            const full_latency = performance.now()-t0;
+            console.log(`Logit Lens Request:\nCompute Latency: ${data.latency}ms\nFull Latency: ${full_latency}ms\nNetwork and UI Latency: ${full_latency-data.latency}ms\n`);
         })
         .catch(err => {
             if (err.name === "AbortError") return;     // replaced by a newer request
