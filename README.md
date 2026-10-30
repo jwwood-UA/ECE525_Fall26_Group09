@@ -60,19 +60,19 @@ Open a web browser to ```localhost:8000```
 ## Implementation Progress
 | Milestone | Status |
 |---|---|
-| FastAPI server (serves UI) | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
-| GPT-2 logit lens backend | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
-| UI ↔ backend integration | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
-| Logit lens grid UI | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
-| Client round-trip latency measurement | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
-| Server-side timing breakdown (compute vs. network) | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
-| Load testing / concurrency limits | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
-| Activation patching UI | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
-| Activation patching Backend | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
-| Guided tutorial content | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
+| FastAPI server (serves UI) | Functional |
+| GPT-2 logit lens backend | Functional |
+| UI ↔ backend integration | Functional |
+| Logit lens grid UI | Functional |
+| Client round-trip latency measurement | Functional |
+| Server-side timing breakdown (compute vs. network) | Functional |
+| Load testing / concurrency limits | Not Started |
+| Activation patching UI | Not Started |
+| Activation patching Backend | Not Started |
+| Guided tutorial content | Not Started |
 
 **Legend:**  
-![Finalized](https://img.shields.io/badge/Finalized-2ea44f?style=flat-square) complete and polished  
-![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) works end-to-end, may still change  
-![Started](https://img.shields.io/badge/Started-e3b341?style=flat-square) in progress  
-![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) planned
+Finalized: complete and polished  
+Functional: works end-to-end, may still change  
+Started: in progress  
+Not Started: planned
