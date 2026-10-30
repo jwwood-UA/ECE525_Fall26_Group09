@@ -44,9 +44,8 @@ Open a web browser to ```localhost:8000```
 | GPT-2 logit lens backend | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
 | UI ↔ backend integration | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
 | Logit lens grid UI | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
-| Client round-trip latency measurement | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
-| Server-side timing breakdown (compute vs. network) | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
-| Latency display in UI | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
+| Client round-trip latency measurement | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
+| Server-side timing breakdown (compute vs. network) | ![Functional](https://img.shields.io/badge/Functional-1f6feb?style=flat-square) |
 | Load testing / concurrency limits | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
 | Activation patching UI | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
 | Activation patching Backend | ![Not Started](https://img.shields.io/badge/Not%20Started-8b949e?style=flat-square) |
