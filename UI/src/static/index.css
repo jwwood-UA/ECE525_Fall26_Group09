@@ -70,8 +70,15 @@
 
 /* While measuring, let content decide the size */
 .grid.measuring .cell {
-    width: auto;
-    height: auto;
+    width: max-content;   /* intrinsic size, not the td's current (old) width */
+    height: max-content;
+}
+
+/* Truncate tokens that don't fit; the popup still shows them in full */
+.grid .cell .tok {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Keep leading spaces visible: " Paris" and "Paris" are different tokens */
@@ -388,4 +395,23 @@ body {
 #logit-run:disabled {
     cursor: progress;
     opacity: 0.6;
+}
+
+/* Visible whitespace glyphs (␣ space, ⇥ tab, ↵ newline): muted so they read as markers, not text */
+.ws {
+    color: #9ca3af;
+    font-weight: 400;
+}
+.grid .cell.dark .ws {
+    color: rgba(255, 255, 255, 0.7);
+}
+.grid .cell .true-next-token-banner .ws {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* In the popup rows, wrap long tokens instead of truncating so the full token is readable */
+.popup-row .popup-tok {
+    white-space: pre-wrap;
+    word-break: break-all;
+    text-overflow: clip;
 }

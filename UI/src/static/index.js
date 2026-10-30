@@ -1,10 +1,14 @@
 // Escape HTML special characters and make invisible whitespace visible
 const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+
+// Visible stand-ins for whitespace characters (rendered muted via .ws)
+const WS_GLYPHS = { " ": "␣", "\t": "⇥", "\n": "↵", "\r": "␍" };
+const ws_span = (ch) => `<span class="ws">${WS_GLYPHS[ch]}</span>`;
+
 const escape_token = (tok) =>
     String(tok)
         .replace(/[&<>"']/g, (ch) => HTML_ESCAPES[ch])
-        .replace(/\n/g, "↵")   // newline -> ↵
-        .replace(/\t/g, "→");  // tab -> →
+        .replace(/[ \t\n\r]/g, ws_span);   // every space, tab, newline -> visible glyph
 
 // Color scale shared by the grid cells and the color bar.
 // prob_scale maps probability (0-1) to color intensity (0-1); swap in Math.sqrt(p) to emphasize small values.
@@ -51,7 +55,7 @@ const fill_logit_lens = (logit_data) => {
         for(const layer_data of logit_data.results.slice(tok*nLayers,(tok+1)*nLayers)){
             lay+=1;
             const top_p = Number(layer_data.predictions[0].probability);
-            const text_class = top_p > 0.55 ? " dark" : ""; // white text on dark backgrounds
+            const text_class = top_p > 0.35 ? " dark" : ""; // white text on dark backgrounds
             logit_grid += `<td data-pos="${tok}" data-layer="${lay}" style="background:${prob_color(top_p)}"><div class="cell${text_class}">`; // open layer box
             logit_grid += `<span class="top-pred tok">${escape_token(layer_data.predictions[0].token)}</span>`; // show highest confidence
             // Add banner to see true next token's position if there is a next token
@@ -81,7 +85,8 @@ const size_cells = (table) => {
         max = Math.max(max, c.offsetWidth, c.offsetHeight);
     }
     table.classList.remove("measuring");
-    table.style.setProperty("--cell", Math.ceil(max) + "px");
+    const MAX_CELL = 140;   // long tokens get truncated with … instead of inflating every cell
+    table.style.setProperty("--cell", Math.min(Math.ceil(max), MAX_CELL) + "px");
 };
 
 let logit_prompt = null;
